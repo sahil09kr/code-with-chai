@@ -14,7 +14,8 @@ let userEmail;
 
 const id = Symbol('123')
 const anotherId = Symbol('123')
-//SYMBOL BASICALLY WRAPS A THING THAT MUST BE UNIQUE AND INTERPRETED AS UNIQUE 
+//SYMBOL BASICALLY WRAPS A THING THAT MUST BE UNIQUE AND Are UNIQUE 
+//Symbols are unique identifiers that are not equal to any other value, even if they have the same value.
 
 console.log(id == anotherId);//false=>because 2 symbols can never be same
 
@@ -26,11 +27,11 @@ console.log(id == anotherId);//false=>because 2 symbols can never be same
 // ***** IF ONE NEEDS TO BE A EXPERT IN JS THEN MASTER 2 THINGS... 1=> OBJECTS AND 2=> WEB EVENTS(changes needed to be done 
 //  when any action is taken from the user side like click, reload, scroll, etc);
 
-// Reference (Non primitive)
+// Reference (Non primitive)Reference types include arrays, objects, and functions
 
 // Array, Objects, Functions
 
-const heros = ["shaktiman", "naagraj", "doga"];  //ARRAY
+const heros = ["shaktiman", "naagraj", "doga"];  //ARRAY always inside " [ ] ";
 let myObj = {
     name: "hitesh",         //OBJECT ALWAYS INSIDE A " { } ";
     age: 22,
@@ -43,3 +44,30 @@ const myFunction = function(){
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+//++++++++++++++++++++MEMORY ALLOCATION IN PRIMITIVE AND NON PRIMIYIVE DATATYPES++++++++++
+
+let username="sahilkra@google.com"
+let upi="6299@paytm"
+let userTwo=username                  // THESE ARE IN STACK(one above other) MEMORY 
+userTwo="suranjan@google.com"
+console.table([username , userTwo]);
+
+// SINCE PRIMITIVE DATATYPES ARE IN STACK MEMORY THEREFORE usertwo gets a copy of username and changes made in any
+// is independent of each oter that is they wont affect/change the value of each other
+
+let userOne = {
+    name : "sahil",
+    upi : "6299@pytm",    // OBJECTS ARE IN HEAP MEMORY
+    age : 23
+
+}
+let user2 = userOne;
+user2.name="Suranjan";
+user2.age="24";
+
+console.table([userOne.name , user2.name , userOne.age , user2.age]);
+
+//since object are non primitive that is refernce type here the user2 gets the reference of userOne and changes made in 
+// any of them will change each other as they are pointing towards the same memory
