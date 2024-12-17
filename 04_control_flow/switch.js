@@ -28,5 +28,5 @@ switch (month) {
         console.log("default case match");
         break;
 }
-//by default wherever the key matches after that all the code is executed(***except default***) therefore to avoid it we use break;
+//by default wherever the key matches after that all the code is executed(***including  default if break keyword is absent before it***) therefore to avoid it we use break;
 
