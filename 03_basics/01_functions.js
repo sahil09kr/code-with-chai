@@ -35,4 +35,27 @@ function loginUserMessage(username){
         return `${username} just logged in`;
     }
 }
-console.log(loginUserMessage())
+// console.log(loginUserMessage())
+
+const user = {
+    username : "sahil",
+    price: 999
+}
+function tellMeAbout(users){
+    console.log(`username is ${users.username} and cart price is ${users.price} `);
+}
+tellMeAbout(user);//here is passed as the object 
+tellMeAbout({
+    username : "suranjan",
+    price : 9999
+});
+// we can declare the object inside argument too as done above 
+// if the property is absent then we will get undefined
+const array =[100,200,300,400]
+function getSecondElement(userarray){
+    return userarray[1];
+}
+console.log(getSecondElement(array));
+console.log(getSecondElement([1,2,3,4]));
+//just like above we directly gave an array in argumrnt
+
