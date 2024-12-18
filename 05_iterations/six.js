@@ -8,18 +8,26 @@
 // } )
 
 // console.log(values);
+//forEach does not return anything 
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// const newNums = myNums.filter( (num) => {
-//     return num > 4
-// } )
+// const newNums=myNums.filter((item)=>{
+//   return item>4});
+  //OR
+
+  const newNums=myNums.filter((item)=>item>4) // THIS WILL SELF RETURN
+
+  //NOTE=> when we ll use scope that is {} then we have to use the return key word and if we use it under paranthesis() only then it ll self return
+
+console.log(newNums);
+//filter actually filters out those data from array which follows a specific condition
 
 // const newNums = []
 
 // myNums.forEach( (num) => {
 //     if (num > 4) {
-//         newNums.push(num)
+//         newNums.push(num)  //this is how we can use forEach to store the required values
 //     }
 // } )
 
@@ -42,5 +50,8 @@ const books = [
 
   userBooks = books.filter( (bk) => { 
     return bk.publish >= 1995 && bk.genre === "History"
+})
+userBooks = books.filter((bk)=>{
+  return bk.publish>=1995 && bk.genre==="History";
 })
   console.log(userBooks);
