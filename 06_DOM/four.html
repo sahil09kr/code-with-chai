@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+    <ul class="Language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`//THIS TRAVERS THE WHOLE DOM TO REACH HERE
+        document.querySelector('.language').appendChild(li)
+    }
+function addOptLang(lang){// this is the optimised approach as it dont traverse the whole DOM
+    const l1=document.createElement('li');
+    l1.appendChild(document.createTextNode(lang));
+    document.querySelector('.Language').appendChild(l1);
+}
+addOptLang("Python");
+addOptLang("React");
+addOptLang("C++");
+//EDIT
+const secondLang=document.querySelector("li:nth-child(2)");
+const newElement=document.createElement('li');
+newElement.textContent="Typescript";
+secondLang.replaceWith(newElement);
+
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>

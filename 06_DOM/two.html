@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM|Chai aur Code</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+    <div class="Parent">
+        <div class="Day">Monday</div>
+        <div class="Day">Tueday</div>
+        <div class="Day">Wednesday</div>
+        <div class="Day">Thursday</div>
+    </div>    
+</body>
+<script>
+    const parent = document.querySelector('.Parent') //the dot in .Parent represents class
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[1]);
+    for(let i=0;i< parent.children.length;i++){ //normal for loop is applied for every list
+        console.log(parent.children[i].innerHTML);
+    }
+    parent.children[1].style.color ="orange";
+    //here the parent div has 4 children node with class name day 
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+    const dayOne=document.querySelector('.Day');
+    console.log(dayOne);
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextSibling);
+    console.log("nodes :", parent.childNodes);
+    //here we get more than 4 node(to be precise 9) reason being => DOM is a complex data modal a change in line is also considered as a childNode therefore 4 days and 5 change in line 
+</script>
+</html>

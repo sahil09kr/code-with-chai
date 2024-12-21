@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur de <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>co
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul> 
+            <!-- UNORDERED LIST -->
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<!-- 1. HTML Basics
+    HTML stands for HyperText Markup Language. It's used to structure content on a webpage.
+    HTML elements are written using tags enclosed in angle brackets (<>). Most elements have an opening tag (e.g., <div>) and a closing tag (e.g., </div>), with content in between.
+2. Understanding <div>
+    The <div> element is a container that groups content together. It's short for "division."
+    <div> doesn't apply any styling or functionality on its own but is often used as a block-level container to organize content, which can then be styled with CSS (Cascading Style Sheets).
+3. Class Attribute
+    THE CLASS ATTRIBUTE IS USED TO ASSIGN A NAME TO THE ELEMENT.This name can be used in CSS or JavaScript to style or interact with the element.
+    In this case, the class is bg-blck.
+4. CSS Classes
+    A CSS class is a style definition that you can apply to HTML elements.
+    To style an element with the class bg-blck, you would create a rule in your CSS file, like this -->
+
+
+        <!-- INNERHTML : SHOWS EVERYTHING EVEN THE HTML file
+            INNERTEXT : SHOWS ALL TEXT EVEN THOSE WHICH ARE HIDDEN
+            TEXTCONTENT : SHOWS ONLY VISBLE TEXT ON webpage -->
+
+
+            <!-- • QuerySelector returns the first element that matches a specified CSS selector, while QuerySelectorAll returns a static NodeList of all elements matching the selector.
+
+            • Using QuerySelector allows you to manipulate individual elements, while QuerySelectorAll enables bulk manipulation of elements. -->
+
+<!-- {Array.from(any name)} the name should be specified by the HTMLlist or NODElist 
+     • The 'from' method can be used to convert HTML collections to arrays
+     • After converting, all array methods can be applied for manipulation -->
